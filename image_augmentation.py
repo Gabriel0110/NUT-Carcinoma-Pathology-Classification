@@ -4,6 +4,7 @@ import random
 import numpy as np
 import skimage as sk
 import skimage.io as skio
+import os
 
 def random_rotation(image_array: ndarray):
     random_degree = random.uniform(-25, 25)
@@ -48,14 +49,13 @@ def augment_images(target, amt):
     }
 
     folder_path = 'C:\\Users\\gabri\\Desktop\\NMC Pathology\\' + target
-    files_to_make = amt
+    num_images = amt
 
     images = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
 
-    num_generated_files = 0
-    while num_generated_files < files_to_make:
+    for i in range(num_images):
         image_to_transform = skio.imread(random.choice(images))
-        num_transforms = random.randint(2, len(transforms))
+        num_transforms = random.randint(2, len(transforms)) # minimum of 2 transformations
         transform_count = 0
         transformed_image = None
         while transform_count <= num_transforms:
@@ -63,7 +63,5 @@ def augment_images(target, amt):
             transformed_image = transforms[key](image_to_transform)
             transform_count += 1
 
-        new_file_path = '%s/augmented_image_%s.png' % (folder_path, num_generated_files)
-
-        skio.imsave(new_file_path, transformed_image)
-        num_generated_files += 1
+        new_file = '%s/new_image_%s.png' % (folder_path, i)
+        skio.imsave(new_file, transformed_image)
