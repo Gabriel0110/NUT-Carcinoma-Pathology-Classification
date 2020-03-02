@@ -10,73 +10,69 @@ Initially, I had at least 35 images of NMC pathology. This is incredibly small a
 
 This has substantially improved results.
 
+
+
 ## Results
 Multiple machine learning algorithms were used for this project to compare the results and performance of each. Different hyperparameters were chosen via grid search with cross validation using 5 folds.
 
 Accuracy and confusion matrices were used to examine performance of each classifier. Confusion matrices are very important to understand what is happening with classification of images, especially when it comes to cancer. It is important to understand the false positives and false negatives, as you might have a desire to minimize one more over the other. This is especially the case for cancer diagnosis. For example, would you rather have more false positives, or more false negatives? This use of machine learning has very critical repercussions if the results are not evaluated and used properly.
 
-#### Support Vector Machine
+### Support Vector Machine
 <b>Test Accuracy:</b> 0.94048
 
 Confusion Matrix:
 
 [[116 8]
-
  [7 121]]
 
-#### XGBoost
+### XGBoost
 <b>Test Accuracy:</b> 0.92857
 
 Confusion Matrix:
 
 [[118 6]
-
  [12 116]]
 
-#### Decision Tree
+### Decision Tree
 <b>Test Accuracy:</b> 0.87302
 
 Confusion Matrix:
 
 [[109 15]
-
  [17 111]]
 
-#### Naive Bayes
+### Naive Bayes
 <b>Test Accuracy:</b> 0.54365
 
 Confusion Matrix:
 
 [[119 5]
-
  [110 18]]
 
-#### Random Forest
+### Random Forest
 <b>Test Accuracy:</b> 0.90873
 
 Confusion Matrix:
 
 [[115 9]
-
  [14 114]]
 
-#### Gradient Boost
+### Gradient Boost
 <b>Test Accuracy:</b> 0.94444
 
 Confusion Matrix:
 
 [[117 7]
-
  [7 121]]
 
-#### Multi-layer Perceptron (Neural Net)
+### Multi-layer Perceptron (Neural Net)
 <b>Test Accuracy:</b> 0.81746
 
 Confusion Matrix:
 
 [[116 8]
-
  [38 90]]
+
 
 
 ## Motivation
