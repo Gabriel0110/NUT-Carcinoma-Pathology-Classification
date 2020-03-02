@@ -13,9 +13,50 @@ This has substantially improved results.
 ## Results
 Multiple machine learning algorithms were used for this project to compare the results and performance of each. Different hyperparameters were chosen via grid search with cross validation using 5 folds.
 
-Accuracy and confusion matrices were used to examine performance of each classifier. Confusion matrices are very important to understand what is happening with classification of images, especially when it comes to cancer. It is important to understand the false positives and false negatives, as you might have a desire to minimize one more over the other. This is especially the case for cancer diagnosis. For example, would you rather have more false positives, or more false negatives?
+Accuracy and confusion matrices were used to examine performance of each classifier. Confusion matrices are very important to understand what is happening with classification of images, especially when it comes to cancer. It is important to understand the false positives and false negatives, as you might have a desire to minimize one more over the other. This is especially the case for cancer diagnosis. For example, would you rather have more false positives, or more false negatives? This use of machine learning has very critical repercussions if the results are not evaluated and used properly.
 
-== RESULTS TO BE INCLUDED HERE ==
+### Support Vector Machine
+<b>Test Accuracy:</b> 0.94048
+Confusion Matrix:
+[[116 8]
+ [7 121]]
+
+### XGBoost
+<b>Test Accuracy:</b> 0.92857
+Confusion Matrix:
+[[118 6]
+ [12 116]]
+
+### Decision Tree
+<b>Test Accuracy:</b> 0.87302
+Confusion Matrix:
+[[109 15]
+ [17 111]]
+
+### Naive Bayes
+<b>Test Accuracy:</b> 0.54365
+Confusion Matrix:
+[[119 5]
+ [110 18]]
+
+### Random Forest
+<b>Test Accuracy:</b> 0.90873
+Confusion Matrix:
+[[115 9]
+ [14 114]]
+
+### Gradient Boost
+<b>Test Accuracy:</b> 0.94444
+Confusion Matrix:
+[[117 7]
+ [7 121]]
+
+### Multi-layer Perceptron (Neural Net)
+<b>Test Accuracy:</b> 0.81746
+Confusion Matrix:
+[[116 8]
+ [38 90]]
+
 
 ## Motivation
 The motivation for this little project was for my best friend Brandon Gordon. I grew up with Brandon since we were in 5th grade, and I am now 24 as of creating this repository -- so we've known each other almost our entire lives. Brandon was sent to the hospital with what seemed to be Pneumonia at first. After some time in the hospital and more tests, tumors were found in his body, and instead of his problem being Pneumonia, he was diagnosed with NUT Midline Carcinoma.
