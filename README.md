@@ -1,5 +1,5 @@
 # NUT-Carcinoma-Pathology-Classification
-Machine learning image classification to attempt to detect NUT Midline Carcinoma in cancer pathology images.
+Machine learning image classification to attempt to detect NUT Midline Carcinoma in cancer pathology images.  
 
 ## Gathering Data
 I had to gather data in order to attempt this classification task. As far as I know, there is no dataset for NMC (NUT Midline Carcinoma) images. I gathered as many unique images from Google Images as I could find to have as my target class. NMC is an extremely rare cancer -- many doctors go through their careers without seeing this diagnosis. Because of this, there are not many images and not a lot of data available yet, so I had to work with what I could find.
@@ -8,7 +8,7 @@ For binary classification, I needed to gather cancer pathology images that were 
 
 Initially, I had at least 35 images of NMC pathology. This is incredibly small amount of data for a machine learning task. To attempt to combat the fact that there is little data, and to hopefully improve results, I ran a series of image augmentations over all images gathered for this task, producing 450+ images for both classes (1 for NMC, 0 for non-NMC images).
 
-This has substantially improved results.
+This has substantially improved results.  
 
 
 
@@ -47,17 +47,19 @@ Accuracy and confusion matrices were used to examine performance of each classif
 [[115 9]  
  [14 114]]
 
-* ### Gradient Boost
+* ### Gradient Boost (WINNER -- best performance)
 <b>Test Accuracy:</b> 0.94444  
 **Confusion Matrix:**  
 [[117 7]  
- [7 121]]
+ [7 121]]  
+
+64 n-estimators were used for best model via gridsearch.  
 
 * ### Multi-layer Perceptron (Neural Net)
 <b>Test Accuracy:</b> 0.81746  
 **Confusion Matrix:**  
 [[116 8]  
- [38 90]]
+ [38 90]]  
 
 
 
